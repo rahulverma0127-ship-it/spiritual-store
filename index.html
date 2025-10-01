@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RudraSoul – Authentic Spiritual Products & Ritual Guides</title>
+  <meta name="description" content="Shop certified Rudraksha, DIY Puja Kits, Ashtadhatu idols & more. Learn rituals step-by-step. Free guides. Pan-India shipping.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="css/main.css" as="style">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <!-- Persistent nav -->
+  <nav aria-label="Main">
+    <a href="#shop">Shop</a>
+    <a href="#guides">Ritual Guides</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- 1. ORIGIN -->
+  <section id="origin" class="scroll-bg">
+    <div class="origin-txt">
+      <h1>RudraSoul</h1>
+      <p>Re-kindling ancient wisdom for the modern seeker. From Kailasha to your home.</p>
+      <a href="#elements" class="btn">Begin Journey</a>
+    </div>
+  </section>
+
+  <!-- 2. FIVE ELEMENTS -->
+  <section id="elements">
+    <h2>The Pancha Bhuta</h2>
+    <div class="grid">
+      <article class="element" data-element="earth">
+        <h3>Prithvi – Earth</h3>
+        <p>Grounding, stability. Use clay diyas, brass idols.</p>
+      </article>
+      <article class="element" data-element="water">
+        <h3>Jal – Water</h3>
+        <p>Flow, emotion. Copper lotas, conch shells.</p>
+      </article>
+      <article class="element" data-element="fire">
+        <h3>Agni – Fire</h3>
+        <p>Transformation. Pure ghee wicks, camphor.</p>
+      </article>
+      <article class="element" data-element="air">
+        <h3>Vayu – Air</h3>
+        <p>Movement, breath. Prayer flags, incense.</p>
+      </article>
+      <article class="element" data-element="ether">
+        <h3>Akasha – Ether</h3>
+        <p>Consciousness. Yantras, Rudraksha malas.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 3. SACRED MARKETPLACE -->
+  <section id="shop">
+    <h2>Sacred Marketplace</h2>
+    <div class="grid" id="product-grid">
+      <!-- Sanity CMS will populate via JS -->
+    </div>
+    <template id="product-card">
+      <div class="card">
+        <img data-src="image" alt="">
+        <div class="card-body">
+          <h3 data-field="name"></h3>
+          <p data-field="price"></p>
+          <button class="btn snipcart-add-item"
+                  data-item-id=""
+                  data-item-price=""
+                  data-item-name=""
+                  data-item-image=""
+                  data-item-url="">Add to Cart</button>
+        </div>
+      </div>
+    </template>
+  </section>
+
+  <!-- 4. FLOWING RIVER OF KNOWLEDGE -->
+  <section id="guides" class="river">
+    <div class="river-bg"></div>
+    <h2>Ritual Guides & Blog</h2>
+    <ul id="guides-list">
+      <!-- Sanity-powered -->
+    </ul>
+  </section>
+
+  <!-- 5. RIPPLES OF TRUST -->
+  <section id="testimonials">
+    <h2>Ripples of Trust</h2>
+    <blockquote>
+      “The DIY Puja Kit let me perform Satyanarayan katha flawlessly—everything was labelled and explained.”
+      <cite>— Priya, Mumbai</cite>
+    </blockquote>
+  </section>
+
+  <!-- 6. SUMMIT OF KAILASHA -->
+  <section id="contact" class="kailasha">
+    <h2>Reach the Summit</h2>
+    <p>Questions? Need a personal ritual consultation?</p>
+    <form action="/.netlify/functions/contact" method="POST">
+      <input name="name" placeholder="Name" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Message" required></textarea>
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <p>Or WhatsApp us: <a href="https://wa.me/919999999999">+91 99999 99999</a></p>
+  </section>
+
+  <!-- Snipcart headless cart -->
+  <script src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js" defer></script>
+  <div id="snipcart" data-api-key="YOUR_SNIPCART_PUBLIC_API_KEY" hidden></div>
+</body>
+</html>
